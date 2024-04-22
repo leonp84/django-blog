@@ -16,6 +16,11 @@ import dj_database_url # noqa
 if os.path.isfile('env.py'):
     import env # noqa
 
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = False
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -26,12 +31,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
 
-ALLOWED_HOSTS = ['8000-leonp84-djangoblog-f98rjcsf6fg.ws-eu110.gitpod.io',
-                 '.herokuapp.com']
+ALLOWED_HOSTS = [
+    'https://8000-leonp84-djangoblog-f98rjcsf6fg.ws-eu110.gitpod.io',
+    '8000-leonp84-djangoblog-f98rjcsf6fg.ws-eu110.gitpod.io',
+    '.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.gitpod.io",
+    "https://*.herokuapp.com"
+]
 
 # Application definition
 
