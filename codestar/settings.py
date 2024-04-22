@@ -18,7 +18,7 @@ if os.path.isfile('env.py'):
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
