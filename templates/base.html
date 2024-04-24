@@ -1,6 +1,7 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'about_page' as about_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -42,6 +43,10 @@
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="{% url 'home' %}">Homee</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'about_page' %}">About</a>
+                    </li>
 
                 </ul>
                 <span class="navbar-text text-muted">
@@ -62,7 +67,7 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         
-        <p class="m-0 text-center text-white">{% block copyright %}Made by Code Me, today!{% endblock copyright %}</p>
+        <p class="m-0 text-center text-white">{% block copyright %}I did it{% endblock copyright %}</p>
         
         <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
