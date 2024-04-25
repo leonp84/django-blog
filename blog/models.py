@@ -31,7 +31,7 @@ class Comment(models.Model):
     body = models.TextField(blank=False)
     created_on = models.DateTimeField(auto_now_add=True)
     approved = models.BooleanField(default=False)
-    challenge = models.FloatField()
+    # challenge = models.FloatField()
 
     class Meta:
         ordering = ["created_on"]
